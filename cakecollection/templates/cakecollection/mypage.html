@@ -1,0 +1,12 @@
+<h1>주문내역</h1>
+
+{% for post in posts_list %}
+
+<h3>{{post.title}}</h3>
+<p>{{post.성함}}</p>
+<p>{{post.연락처}}</p>
+<p>{{post.희망픽업일시간}}</p>
+<p>{{post.맛}}</p>
+<hr>
+
+{% endfor %}
