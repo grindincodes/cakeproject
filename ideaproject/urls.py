@@ -20,10 +20,15 @@ import cakecollection.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', cakecollection.views.home,name="home"),
-    path('new1/', cakecollection.views.new1, name="new1"),
+    path('new/',cakecollection.views.new, name="new"),
     path('new2/', cakecollection.views.new2, name="new2"),
     path('new3/', cakecollection.views.new3, name="new3"),
     path('new4/', cakecollection.views.new4, name="new4"),
+    path('new5/',cakecollection.views.new, name="new5"),
+    path('new6/', cakecollection.views.new2, name="new6"),
+    path('new7/', cakecollection.views.new3, name="new7"),
+    path('new8/', cakecollection.views.new4, name="new8"),
+    path('new9/', cakecollection.views.new4, name="new9"),
     path('mypage/',cakecollection.views.mypage, name="mypage"),
 
 ]

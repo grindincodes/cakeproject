@@ -2,11 +2,12 @@
 
 {% for post in posts_list %}
 
-<h3>{{post.title}}</h3>
-<p>{{post.성함}}</p>
-<p>{{post.연락처}}</p>
-<p>{{post.희망픽업일시간}}</p>
-<p>{{post.맛}}</p>
+<h3>주문한 가게 이름 : {{post.title}}</h3>
+<p>주문자 성함 : {{post.성함}}</p>
+<p>등록한 연락처 : {{post.연락처}}</p>
+<p>희망 픽업일 : {{post.희망픽업일}}</p>
+<p>희망 픽업 시간 : {{post.희망픽업시간}}</p>
+<p>선택한 맛 : {{post.맛}}</p>
 <hr>
 
 {% endfor %}
