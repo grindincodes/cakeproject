@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-
+import datetime
 # Create your models here.
 
 
@@ -46,7 +46,7 @@ class Content(models.Model):
     title=models.CharField(max_length=200)
     성함=models.CharField(max_length=200)
     연락처=models.CharField(max_length=200)
-    희망픽업일=models.CharField(null=True,max_length=200)
+    희망픽업일= models.CharField(null=True,max_length=30,default=datetime.date.today)
     희망픽업시간=models.CharField(
         null=True,
         max_length=30,
@@ -69,5 +69,6 @@ class Content(models.Model):
         choices=SIZE_CHOICES,
         default="도시락케이크"
     )
+    원하시는도안사진첨부 = models.ImageField(null=True,upload_to='images/', blank=True)
     
 

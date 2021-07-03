@@ -18,6 +18,7 @@ def new4(request):
 def mypage(request):
     posts=Content.objects.all()
     return render(request,'cakecollection/mypage.html',{'posts_list':posts})
+
     #mypage라는 함수 만들었고,
     #Content라는 모델에 가지고 오는 데이터베이스 데이터들을 posts에 담기
     #mypage.html에 posts_list라는 이름으로넘김(키:값)형태
