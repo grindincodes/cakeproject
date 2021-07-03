@@ -1,4 +1,4 @@
-
+{% load static %}
 <style>
 
  @font-face {
@@ -29,6 +29,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <!--<link href="css/styles.css" rel="stylesheet" />-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <!-- Navigation-->
@@ -74,7 +75,7 @@
     <div class = "cakeorder">
       
 
-    <h1 style="color:rgb(240, 147, 160);">첫번째 케이크 가게 주문양식</h1>
+    <h1 style="color:rgb(240, 147, 160);">멋사짱 케이크 가게 주문양식</h1>
 <br>
 <img class="card-img-top" src="https://media.vlpt.us/images/myway00/post/cd6ba949-30b5-4240-b58f-67f8d491f763/image.png" alt="..." />
 <br>
@@ -86,6 +87,29 @@
     style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">양식 제출</button>
     </form>
     </div>
+    <br><br>
+    <a style="font-size: 30px;"> -- 시뮬레이션 -- </a><br><br><br>
+    <div style = "position:absolute"><img src ="{% static 'img/cake15.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake14.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake13.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake12.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake11.png' %} " width="400px"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button class = "add" onclick= "열기(0)" style="font-size: 20px; background-color: salmon;">윗크림</button>
+    <button class = "add" onclick= "열기(1)" style="font-size: 20px; background-color: sandybrown;">아래크림</button>
+    <button class = "add" onclick= "열기(2)" style="font-size: 20px; background-color: springgreen;">체리</button>
+    <button class = "add" onclick= "열기(3)" style="font-size: 20px; background-color: steelblue;">스프링클</button>
+
+    <script>
+        function 열기(num){
+            if(document.getElementsByClassName('cake')[num].style.display == 'none'){
+                document.getElementsByClassName('cake')[num].style.display = 'block';
+            }
+            else{
+                document.getElementsByClassName('cake')[num].style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>

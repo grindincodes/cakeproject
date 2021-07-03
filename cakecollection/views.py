@@ -6,6 +6,9 @@ from .forms import ContentForm
 def home(request):
     return render(request, 'cakecollection/home.html')
 
+def home2(request):
+    return render(request, 'cakecollection/home2.html')
+
 def new1(request):
     return render(request, 'cakecollection/new1.html')
 def new2(request):

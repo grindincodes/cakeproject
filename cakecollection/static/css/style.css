@@ -16,6 +16,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   font-family: 'yg-jalnan';
 }
@@ -58,6 +64,36 @@
   }
 }
 
+#search-bar {
+  width : 600px;
+  margin: 0 auto;
+}
+
+.filter-button {
+  margin-top : 20px;
+  margin-left : 950px;
+  border-radius: 7px;
+}
+
+.filter-box {
+  margin: 10px 100px 0px 700px;
+  color: rgb(145, 214, 236);
+  font-size: 15px;
+  border-style: solid;
+  border-color: rgb(223, 221, 221);
+  border-radius: 15px;
+  display: none;
+}
+
+.submit-button {
+  margin-left: 400px;
+  border-radius: 4px;
+}
+
+.cake{
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
@@ -76,6 +112,27 @@ hr {
   background-color: currentColor;
   border: 0;
   opacity: 0.25;
+}
+
+button.add{
+  width:100px;
+  background-color: 43a047;
+  border-radius: 50px 50px 50px 50px;
+  border-width: 10px;
+  border-color: black;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 15px;
+  margin: 4px;
+  cursor: pointer;
+  font-family: Cafe24Ssurround;
+}
+button.add:hover{
+ background: gray;
+ cursor: pointer;
+ box-shadow: 0 2px 4px gray;
 }
 
 hr:not([size]) {

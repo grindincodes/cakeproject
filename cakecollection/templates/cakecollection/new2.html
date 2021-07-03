@@ -1,6 +1,129 @@
-<h1>두번째 케이크 가게 주문양식입니당</h1>
+{% load static %}
+<style>
 
-<form method='POST' class='post-form'> {% csrf_token %}
+ @font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+    font-family: 'yg-jalnan';
+}
+.cakeorder{
+    display: table; margin-left: auto; margin-right: auto; 
+
+}
+</style>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ALLCAKES🍰</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!--<link href="css/styles.css" rel="stylesheet" />-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{% url 'home' %}">ALLCAKES🍰</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Products</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="button" onclick=location.href="{% url 'mypage' %}">
+                        나의 주문내역
+                        <!--<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>-->
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <!--
+    <header class="bg-dark py-5" style="font-family: Arial; color: rgb(253, 160, 168);">-->
+        <header style="color : rgb(173, 16, 121);">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-dark"> <!---->
+                <h1 class="display-4 fw-bolder">ALLCAKES🍰</h1>
+                <p class="lead fw-normal text-black-50 mb-0">✨주문서 양식✨</p>
+            </div>
+        </div>
+    </header>
+      <!---------------------------------------------------------------------------------------------------->
+    <div class = "cakeorder">
+      
+
+    <h1 style="color:rgb(240, 147, 160);">두희네 케이크 가게 주문양식</h1>
+<br>
+<img class="card-img-top" src="https://media.vlpt.us/images/myway00/post/124c85e0-fca0-4af7-9e96-bd2414fb94cf/image.png" alt="..." />
+<br>
+<form method='POST' enctype="multipart/form-data" class='post-form'> 
+    {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">양식 제출</button>
+
+    <button type="submit"
+    style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">양식 제출</button>
+    </form>
+    </div>
+    <br><br>
+    <a style="font-size: 30px;"> -- 시뮬레이션 -- </a><br><br><br>
+    <div style = "position:absolute"><img src ="{% static 'img/cake15.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake14.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake13.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake12.png' %} " width="400px"></div>
+    <div style = "position:absolute" class = "cake"><img src ="{% static 'img/cake11.png' %} " width="400px"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button class = "add" onclick= "열기(0)" style="font-size: 20px; background-color: salmon;">윗크림</button>
+    <button class = "add" onclick= "열기(1)" style="font-size: 20px; background-color: sandybrown;">아래크림</button>
+    <button class = "add" onclick= "열기(2)" style="font-size: 20px; background-color: springgreen;">체리</button>
+    <button class = "add" onclick= "열기(3)" style="font-size: 20px; background-color: steelblue;">스프링클</button>
+
+    <script>
+        function 열기(num){
+            if(document.getElementsByClassName('cake')[num].style.display == 'none'){
+                document.getElementsByClassName('cake')[num].style.display = 'block';
+            }
+            else{
+                document.getElementsByClassName('cake')[num].style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+<!--
+<h1 style="font-family: Arial; color: rgb(134, 76, 0);">[ 여러분만의 레시피를 작성해주세요 ]</h1>
+
+<form method='POST' class='post-form'>{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"
+    style="color: white; background:rgb(136, 77, 0); border-radius:0.5em;">
+    저장하기</button>
+
 </form>
+-->

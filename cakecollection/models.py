@@ -43,7 +43,7 @@ class Content(models.Model):
         ('3호(4~5인)','2호(4~5인)'),
     ]
 
-    title=models.CharField(max_length=200)
+    가게이름=models.CharField(max_length=200, default="OO cake")
     성함=models.CharField(max_length=200)
     연락처=models.CharField(max_length=200)
     희망픽업일= models.CharField(null=True,max_length=30,default=datetime.date.today)

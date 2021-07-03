@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', cakecollection.views.home,name="home"),
+    path('', cakecollection.views.home, name="home"),
+    path('search/', cakecollection.views.home2, name="home2"),
     path('new/',cakecollection.views.new, name="new"),
     path('new2/', cakecollection.views.new2, name="new2"),
     path('new3/', cakecollection.views.new3, name="new3"),
